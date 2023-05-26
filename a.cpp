@@ -1,13 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define rep(i,n) for(int i = 0;i < (n);i++)
 int main(){
-	int n;
-	cin >> n;
-	if (n == 3 || n == 2 || n == 4){
-		cout << "No" << "\n";
-	}else{
-		cout << "Yes" << "\n";
-	}
-	return 0;
+  int n;
+  string s;
+  cin >> n >> s;
+  rep(i,n){
+    if (s[i] == s[i+1] ) {
+      cout << (char)((int)s[i] - (int)'a' +(int)'A')<< (char)((int)s[i] - (int)'a' +(int)'A');
+      i++;
+    }else{
+      cout << s[i];
+    }
+  }
+  cout << endl;
 }
